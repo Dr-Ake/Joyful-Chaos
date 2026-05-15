@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initColorPicker();
     initDragAndDrop();
+    initVinylPage();
 });
 
 function initColorPicker() {
@@ -258,5 +259,69 @@ function initDragAndDrop() {
             const msg = dropZone.querySelector('p');
             if(msg) msg.textContent = `Added: ${files[0].name}`;
         }
+    }
+}
+
+function initVinylPage() {
+    // 1. Drop Zone logic
+    const vinylDropZone = document.getElementById('vinyl-drop-zone');
+    if (vinylDropZone) {
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            vinylDropZone.addEventListener(eventName, e => {
+                e.preventDefault();
+                e.stopPropagation();
+            }, false);
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            vinylDropZone.addEventListener(eventName, () => {
+                vinylDropZone.classList.add('bg-primary-fixed/20');
+                vinylDropZone.classList.add('border-primary');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            vinylDropZone.addEventListener(eventName, () => {
+                vinylDropZone.classList.remove('bg-primary-fixed/20');
+                vinylDropZone.classList.remove('border-primary');
+            }, false);
+        });
+
+        vinylDropZone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if (files && files.length > 0) {
+                const msg = vinylDropZone.querySelector('h3');
+                if(msg) msg.textContent = `Uploaded: ${files[0].name}`;
+            }
+        }, false);
+    }
+
+    // 2. Color Selection Logic
+    const colorSwatches = document.querySelectorAll('.color-swatch');
+    const colorLabel = document.getElementById('selected-color-label');
+    
+    if (colorSwatches.length > 0) {
+        colorSwatches.forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                // Remove active ring from all
+                colorSwatches.forEach(s => {
+                    s.classList.remove('ring-primary');
+                    s.classList.add('ring-transparent');
+                });
+                
+                // Add active ring to selected
+                swatch.classList.remove('ring-transparent');
+                swatch.classList.add('ring-primary');
+                
+                // Update label
+                if (colorLabel) {
+                    colorLabel.textContent = `Selected: ${swatch.getAttribute('data-color')}`;
+                }
+            });
+        });
+        
+        // Select first by default
+        colorSwatches[0].click();
     }
 }
