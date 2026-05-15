@@ -258,8 +258,13 @@ function drawRainbow(ctx, width, height, lightness) {
 }
 
 function initDragAndDrop() {
-    const dropZone = document.getElementById('patch-drop-zone');
-    const fileInput = document.getElementById('patch-file-input');
+    setupDropZone('patch-drop-zone', 'patch-file-input');
+    setupDropZone('vinyl-drop-zone', 'vinyl-file-input');
+}
+
+function setupDropZone(dropZoneId, inputId) {
+    const dropZone = document.getElementById(dropZoneId);
+    const fileInput = document.getElementById(inputId);
     if (!dropZone) return;
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -309,7 +314,6 @@ function initDragAndDrop() {
         const reader = new FileReader();
         reader.onload = (e) => {
             const dataUrl = e.target.result;
-            const dropZone = document.getElementById('patch-drop-zone');
             
             // Show preview in the drop zone itself using an overlay container
             let previewContainer = dropZone.querySelector('.patch-preview-container');
