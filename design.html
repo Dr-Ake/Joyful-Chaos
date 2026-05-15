@@ -150,51 +150,45 @@
     </div>
     <!-- Bento Grid Layout -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-        <!-- Left Canvas: The Clothesline Preview (Col Span 7) -->
-        <div class="lg:col-span-7 relative w-full rounded-[2rem] bg-surface-container border-2 border-tertiary-fixed ambient-shadow paper-texture overflow-hidden flex flex-col items-center justify-center min-h-[600px] p-8">
-            <!-- Integrated Canvas Picker Floating Palette -->
-            <div class="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 bg-surface-container-lowest/80 backdrop-blur-md p-3 rounded-2xl border-2 border-tertiary-fixed shadow-lg z-20">
-                <p class="font-label-md text-label-md text-tertiary text-center mb-1 border-b border-surface-variant pb-2">Item</p>
-                <button class="w-12 h-12 rounded-xl bg-surface-container-low border-2 border-primary flex items-center justify-center text-primary shadow-sm hover:bg-primary-fixed transition-colors" title="T-Shirt">
-                    <span class="material-symbols-outlined text-2xl">apparel</span>
-                </button>
-                <button class="w-12 h-12 rounded-xl bg-transparent border-2 border-transparent hover:border-tertiary-fixed flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Hoodie">
-                    <span class="material-symbols-outlined text-2xl">dry_cleaning</span>
-                </button>
-                <button class="w-12 h-12 rounded-xl bg-transparent border-2 border-transparent hover:border-tertiary-fixed flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Tote Bag">
-                    <span class="material-symbols-outlined text-2xl">shopping_bag</span>
-                </button>
-                <button class="w-12 h-12 rounded-xl bg-transparent border-2 border-transparent hover:border-tertiary-fixed flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Beanie">
-                    <span class="material-symbols-outlined text-2xl">sports_baseball</span>
-                </button>
-            </div>
-            <!-- Decorative Elements -->
-            <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-                <!-- The "Clothesline" -->
-                <svg class="absolute top-16 left-0 w-full h-8" preserveAspectRatio="none" viewBox="0 0 100 10">
-                    <path d="M0,5 Q50,15 100,5" fill="none" opacity="0.5" stroke="#757687" stroke-dasharray="2 1" stroke-width="0.5"></path>
-                </svg>
-                <!-- Pegs -->
-                <div class="absolute top-14 left-[30%] w-3 h-8 bg-secondary rounded-sm rotate-6 shadow-sm"></div>
-                <div class="absolute top-14 right-[30%] w-3 h-8 bg-secondary rounded-sm -rotate-6 shadow-sm"></div>
-            </div>
-            <!-- 3D T-Shirt Preview Container -->
-            <div class="relative z-10 w-full max-w-md mx-auto aspect-[3/4] flex items-center justify-center transform hover:-translate-y-2 transition-transform duration-500 ease-out">
-                <img alt="Blank t-shirt hanging on a line" class="w-full h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb9t9av0NqA5pIH0G-fCtRGJpIRwyRBHAvWYi2avtheDZqfmcFQ_UrVjxyfKLjPyyTch0f54rFhMQzY4e3vH4YcOS7m_mBFw5eWCu_6KYaxDdUhkkWyyHzoS-J0_jHQ_WrGzHAJ7HgpO3woBpJ6kKao6mz2UulL7iMEgKmWg8eHa9-vjJOgQ5ckLoKMsQhOuqQ9lephTP1VbhnHNQ0MTFNuRhkz4RRYUW5c4NxlvVtK5hSc6mu5T5cR9KUIkcqEI9ErlPlqXIVF3c7"/>
-                <!-- Overlay Patch Placeholder (Active state simulation) -->
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 border-2 border-dashed border-secondary-container rounded-full flex items-center justify-center bg-surface/50 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
-                    <span class="material-symbols-outlined text-tertiary" style='font-variation-settings: "FILL" 1;'>add</span>
+        <!-- Left Section: Catalog + Canvas (Col Span 7) -->
+        <div class="lg:col-span-7 flex flex-row items-center justify-start min-h-[600px] gap-6">
+            <!-- Interactive Catalog Palette (Outside the Square) -->
+            <div id="catalog-palette" class="flex flex-col w-64 shrink-0 max-h-[450px] bg-surface-container border-2 border-tertiary-fixed ambient-shadow rounded-[2rem] shadow-lg z-20 overflow-hidden">
+                <!-- Category Tabs -->
+                <div class="flex items-center justify-between p-2 bg-surface-container-low border-b border-surface-variant" id="category-tabs-container">
+                    <button class="catalog-tab-btn active text-primary hover:text-primary-fixed p-2 rounded-lg transition-colors flex items-center justify-center" data-category="tshirts" title="T-Shirts" data-icon="tshirt">
+                    </button>
+                    <button class="catalog-tab-btn text-on-surface-variant hover:bg-surface-variant/50 hover:text-primary p-2 rounded-lg transition-colors flex items-center justify-center" data-category="sweaters" title="Sweaters" data-icon="pullover">
+                    </button>
+                    <button class="catalog-tab-btn text-on-surface-variant hover:bg-surface-variant/50 hover:text-primary p-2 rounded-lg transition-colors flex items-center justify-center" data-category="polos" title="Polos" data-icon="polo">
+                    </button>
+                    <button class="catalog-tab-btn text-on-surface-variant hover:bg-surface-variant/50 hover:text-primary p-2 rounded-lg transition-colors flex items-center justify-center" data-category="hats" title="Hats" data-icon="baseballhat">
+                    </button>
+                    <button class="catalog-tab-btn text-on-surface-variant hover:bg-surface-variant/50 hover:text-primary p-2 rounded-lg transition-colors flex items-center justify-center" data-category="bags" title="Bags" data-icon="totebag">
+                    </button>
+                </div>
+                <!-- Sub-Item List -->
+                <div id="catalog-subitems" class="flex flex-col gap-1 p-2 overflow-y-auto custom-scrollbar bg-surface-container">
+                    <!-- Populated by JS -->
                 </div>
             </div>
-            <!-- View Controls -->
-            <div class="absolute bottom-6 flex gap-4 bg-surface-container-lowest px-6 py-3 rounded-full border-2 border-tertiary-fixed shadow-sm">
-                <button class="text-outline hover:text-primary transition-colors flex items-center justify-center">
-                    <span class="material-symbols-outlined text-[20px]">rotate_left</span>
-                </button>
-                <div class="w-px h-6 bg-surface-container-highest"></div>
-                <button class="text-outline hover:text-primary transition-colors flex items-center justify-center">
-                    <span class="material-symbols-outlined text-[20px]">rotate_right</span>
-                </button>
+
+            <!-- The Square (Clothesline Preview) -->
+            <div class="relative w-full flex-grow rounded-[2rem] bg-surface-container border-2 border-tertiary-fixed ambient-shadow paper-texture overflow-hidden flex flex-col items-center justify-center p-8">
+                <!-- Decorative Elements -->
+                <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+                    <!-- The "Clothesline" -->
+                    <svg class="absolute top-16 left-0 w-full h-8" preserveAspectRatio="none" viewBox="0 0 100 10">
+                        <path d="M0,5 Q50,15 100,5" fill="none" opacity="0.5" stroke="#757687" stroke-dasharray="2 1" stroke-width="0.5"></path>
+                    </svg>
+                    <!-- Pegs -->
+                    <div class="absolute top-14 left-[40%] w-3 h-8 bg-secondary rounded-sm rotate-6 shadow-sm"></div>
+                    <div class="absolute top-14 right-[40%] w-3 h-8 bg-secondary rounded-sm -rotate-6 shadow-sm"></div>
+                </div>
+                <!-- Dynamic Clothing Container -->
+                <div id="dynamic-clothing-area" class="relative z-10 w-full max-w-sm aspect-[3/4] overflow-visible flex items-center justify-center">
+                    <!-- SVG items will be injected here by app.js -->
+                </div>
             </div>
         </div>
         
@@ -242,7 +236,7 @@
                         <!-- Lightness Slider -->
                         <div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-tertiary-fixed shadow-sm">
                             <span class="material-symbols-outlined text-outline">dark_mode</span>
-                            <input type="range" id="lightness-slider" min="0" max="100" value="50" class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer" style="accent-color: #001db1;">
+                            <input type="range" id="lightness-slider" min="0" max="100" value="100" class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer" style="accent-color: #001db1;">
                             <span class="material-symbols-outlined text-primary" style='font-variation-settings: "FILL" 1;'>light_mode</span>
                         </div>
                         <p class="font-label-md text-label-md text-on-surface-variant text-center">Select your signature shade from the full spectrum</p>
@@ -257,23 +251,17 @@
                     <span class="material-symbols-outlined text-secondary-container" style='font-variation-settings: "FILL" 1;'>interests</span>
                     Add Your Design
                 </h2>
-                <!-- Tabs -->
-                <div class="flex gap-2 p-1 bg-surface-container rounded-xl border border-outline-variant/30">
-                    <button class="py-2 px-4 bg-surface-container-lowest text-primary rounded-lg font-label-md text-label-md shadow-sm border border-tertiary-fixed flex items-center justify-center gap-2 w-full">
-                        <span class="material-symbols-outlined text-[18px]">texture</span>
-                        Custom Patches
-                    </button>
-                </div>
                 <!-- Drop Zone -->
                 <div id="patch-drop-zone" class="w-full border-2 border-dashed border-outline-variant rounded-[1.5rem] bg-surface-container-lowest hover:bg-tertiary-fixed/30 transition-colors p-8 flex flex-col items-center justify-center text-center cursor-pointer min-h-[200px] relative overflow-hidden group mt-2 hover-lift">
+                    <input type="file" id="patch-file-input" class="hidden" accept="image/*">
                     <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-[32px]">add_photo_alternate</span>
                     </div>
                     <p class="font-body-md text-body-md text-on-surface-variant font-medium max-w-[80%]">
-                        Drag &amp; drop your whimsical designs here, or <span class="text-primary underline decoration-2 underline-offset-4">browse collection</span>
+                        Click or drag &amp; drop your whimsical designs here
                     </p>
                     <!-- Decorative background shapes in D&D area -->
-                    <div class="absolute -bottom-4 -right-4 text-tertiary-fixed opacity-50 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute -bottom-4 -right-4 text-tertiary-fixed opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none">
                         <svg fill="currentColor" height="60" viewBox="0 0 24 24" width="60"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h4v2h-4v4h-2v-4H7V9h4z"></path></svg>
                     </div>
                 </div>
