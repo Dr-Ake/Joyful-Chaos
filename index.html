@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About - Joyful Chaos</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#eeecf9",
+                        "surface-variant": "#e3e1ee",
+                        "inverse-on-surface": "#f1effc",
+                        "tertiary-fixed": "#cde5ff",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#b6beff",
+                        "on-tertiary-fixed": "#001d32",
+                        "on-secondary-fixed": "#1e1c00",
+                        "background": "#fbf8ff",
+                        "secondary-fixed": "#f0e82b",
+                        "inverse-primary": "#bcc2ff",
+                        "on-secondary-container": "#696500",
+                        "on-primary-fixed-variant": "#0d2acf",
+                        "surface-container-low": "#f4f2ff",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#ede527",
+                        "inverse-surface": "#2f3039",
+                        "tertiary-fixed-dim": "#95ccff",
+                        "on-tertiary-container": "#8bc8ff",
+                        "tertiary": "#003c5f",
+                        "secondary": "#646100",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#dfe0ff",
+                        "primary": "#001db1",
+                        "surface-container-highest": "#e3e1ee",
+                        "outline": "#757687",
+                        "surface-dim": "#dad9e5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#4c4900",
+                        "tertiary-container": "#005483",
+                        "surface": "#fbf8ff",
+                        "outline-variant": "#c5c5d8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fbf8ff",
+                        "on-surface-variant": "#444655",
+                        "surface-container-high": "#e8e7f4",
+                        "on-surface": "#1a1b24",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#344ae6",
+                        "secondary-fixed-dim": "#d3cb00",
+                        "primary-fixed-dim": "#bcc2ff",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1f37d7",
+                        "on-tertiary-fixed-variant": "#004a75",
+                        "on-primary-fixed": "#000b62",
+                        "on-background": "#1a1b24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Delius"],
+                        "headline-md": ["Delius"],
+                        "headline-xl": ["Delius"],
+                        "headline-lg": ["Delius"],
+                        "label-md": ["Delius"],
+                        "headline-xl-mobile": ["Delius"],
+                        "body-lg": ["Delius"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+
+<!-- TopNavBar -->
+<header class="w-full relative z-50">
+    <nav class="bg-surface-container dark:bg-surface-dim border-b-2 border-tertiary-fixed shadow-[0_4px_20px_-4px_rgba(0,60,95,0.1)] docked full-width top rounded-b-xl">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+            <!-- Brand Logo -->
+            <a href="index.html" class="block">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxgTzqlZJ3vkEajj0njO5CkoM28HBlPVfey9V5XGA0uIKUadfBecQMsKo9qEkkpvyZzOAzRHn5AnHJTweah_xoE25oIY1qbnLzMHK3keD5nNm5eY2-WtNTofbrFwo83_KQtK5DELIELM5C5XKoBTMKr2skTRb3RGdRrFfHzj8uuy_an5SCUv0lv2o_VQ9xkj6bjjTWRiU6eDW4XC-NEThPswveFiSeugahg1SUiomM3orxCCck_1u5SVxDvfEFoPOYSr208wsGUTc" alt="Joyful Chaos" class="h-12 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform"/>
+            </a>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center gap-8 font-headline-md text-headline-md">
+                <li>
+                    <a href="index.html" class="text-primary dark:text-primary-fixed-dim border-b-2 border-secondary-container pb-1 hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300">About</a>
+                </li>
+                <li>
+                    <a href="design.html" class="text-on-surface-variant dark:text-outline font-medium hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300">Shop Customs</a>
+                </li>
+                <li>
+                    <a href="#" class="text-on-surface-variant dark:text-outline font-medium hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300">Vinyl</a>
+                </li>
+                <li>
+                    <a href="#" class="text-on-surface-variant dark:text-outline font-medium hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300">Freedom for Fighters</a>
+                </li>
+            </ul>
+            <!-- Trailing Primary Action -->
+            <a href="design.html" class="inline-block bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-xl hover:scale-105 hover:rotate-1 transition-all duration-300 active:scale-95 shadow-sm shadow-tertiary/10">
+                Start Designing
+            </a>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Hero Section -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col items-center text-center">
+    
+    <div class="mb-16 relative hover-lift">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxgTzqlZJ3vkEajj0njO5CkoM28HBlPVfey9V5XGA0uIKUadfBecQMsKo9qEkkpvyZzOAzRHn5AnHJTweah_xoE25oIY1qbnLzMHK3keD5nNm5eY2-WtNTofbrFwo83_KQtK5DELIELM5C5XKoBTMKr2skTRb3RGdRrFfHzj8uuy_an5SCUv0lv2o_VQ9xkj6bjjTWRiU6eDW4XC-NEThPswveFiSeugahg1SUiomM3orxCCck_1u5SVxDvfEFoPOYSr208wsGUTc" alt="Joyful Chaos Logo Large" class="w-full max-w-[400px] h-auto drop-shadow-2xl mx-auto"/>
+    </div>
+    
+    <!-- Bio Section -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto text-left mb-20 bg-surface-container-low p-8 md:p-12 rounded-[3rem] border-2 border-tertiary-fixed/50 ambient-shadow paper-texture">
+        <div class="w-full md:w-5/12 flex justify-center hover-lift">
+            <!-- Using a placeholder name for the image, the user will need to save their image as 'amanda.jpg' -->
+            <img src="images/amanda.jpg" alt="Amanda Posey" class="rounded-[2rem] border-4 border-surface-container-lowest shadow-xl object-cover w-full max-w-[320px] aspect-[4/5]"/>
+        </div>
+        <div class="w-full md:w-7/12 flex flex-col items-center md:items-start text-center md:text-left">
+            <h1 class="font-headline-xl text-headline-xl text-tertiary mb-6 relative inline-block">
+                Meet Amanda
+                <svg class="absolute -top-8 -right-10 w-16 h-16 text-secondary-container animate-bounce" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Hey girl (don’t make it weird, that’s how I like to greet people)! My name is Amanda Posey! My dream was to be a Kindergarten teacher (which I totally did for 3 years until I had my son)… but dreams change! Now I am a stay at home mom/creative engineer! I created Joyful Chaos to bring your vision to life! Let’s create something wonderful together!
+            </p>
+        </div>
+    </div>
+    
+    <!-- Mission & Offerings Section -->
+    <div class="w-full max-w-5xl mx-auto mb-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Mission Statement -->
+        <div class="bg-primary text-on-primary rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-center ambient-shadow relative overflow-hidden paper-texture border border-primary-fixed/20 hover-lift">
+            <span class="material-symbols-outlined absolute top-4 right-4 text-primary-fixed/20 text-[120px] -rotate-12 pointer-events-none">star</span>
+            <span class="material-symbols-outlined absolute bottom-4 left-4 text-primary-fixed/20 text-[80px] rotate-12 pointer-events-none">water_drop</span>
+            
+            <h3 class="font-headline-lg text-headline-lg text-primary-fixed mb-6 relative z-10">My Mission</h3>
+            <p class="font-body-lg text-body-lg leading-relaxed mb-6 relative z-10">
+                "To create wearable products with reliable craftsmanship and personalized design!"
+            </p>
+            <p class="font-headline-md text-headline-md text-secondary-container mb-4 relative z-10">
+                Let's bring your vision to life!
+            </p>
+            <div class="w-full h-px bg-primary-fixed/30 my-4 relative z-10"></div>
+            <p class="font-label-md text-label-md tracking-[0.2em] uppercase relative z-10 text-primary-fixed-dim">
+                Create • Empower • Transform.
+            </p>
+        </div>
+
+        <!-- Offerings & Contact -->
+        <div class="bg-surface-container-high border-2 border-tertiary-fixed/40 rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-center ambient-shadow relative overflow-hidden hover-lift">
+            <span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-tertiary-fixed/20 text-[200px] pointer-events-none">checkroom</span>
+            
+            <h3 class="font-headline-lg text-headline-lg text-tertiary mb-2 relative z-10">Founder & Designer</h3>
+            <p class="font-label-md text-label-md text-tertiary/70 uppercase tracking-widest mb-8 relative z-10">Amanda Posey</p>
+            
+            <div class="bg-surface-container-lowest/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-tertiary-fixed/50 relative z-10 shadow-sm">
+                <h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-3">Custom Products</h4>
+                <p class="font-body-md text-body-md text-tertiary leading-relaxed flex flex-wrap justify-center items-center gap-2">
+                    <span>Shirts</span> 
+                    <span class="text-tertiary-fixed-dim text-xs">★</span> 
+                    <span>Bags</span> 
+                    <span class="text-tertiary-fixed-dim text-xs">★</span> 
+                    <span>Decals</span> 
+                    <span class="text-tertiary-fixed-dim text-xs">★</span> 
+                    <span>Hats</span> 
+                    <span class="text-tertiary-fixed-dim text-xs">★</span> 
+                    <span>& More</span>
+                </p>
+            </div>
+            
+            <div class="flex flex-col gap-3 relative z-10">
+                <a href="mailto:joyfulchaosllc@gmail.com" class="inline-flex items-center justify-center gap-2 bg-tertiary text-on-tertiary font-label-md text-label-md px-6 py-4 rounded-xl hover:scale-105 transition-transform shadow-md">
+                    <span class="material-symbols-outlined text-[20px]">mail</span>
+                    joyfulchaosllc@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bento Grid Showcase -->
+    <div class="w-full max-w-2xl mx-auto">
+        <!-- Feature 1 -->
+        <div class="rounded-[2rem] bg-surface-container border-2 border-tertiary-fixed ambient-shadow paper-texture p-10 flex flex-col items-center justify-center hover-lift cursor-pointer" onclick="window.location.href='design.html'">
+            <span class="material-symbols-outlined text-[64px] text-primary mb-4">palette</span>
+            <h2 class="font-headline-lg text-headline-lg text-tertiary mb-3">Custom Designs</h2>
+            <p class="text-on-surface-variant text-center">Express yourself with our fully customizable apparel. Pick your colors, add patches, and make it yours.</p>
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-tertiary dark:bg-surface-container-lowest full-width rounded-t-[3rem] mt-section-gap border-t-4 border-secondary-container/20 relative z-10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-base w-full px-margin-mobile md:px-margin-desktop py-12 max-w-7xl mx-auto">
+        <!-- Brand Logo -->
+        <a href="index.html" class="block mb-4 md:mb-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxgTzqlZJ3vkEajj0njO5CkoM28HBlPVfey9V5XGA0uIKUadfBecQMsKo9qEkkpvyZzOAzRHn5AnHJTweah_xoE25oIY1qbnLzMHK3keD5nNm5eY2-WtNTofbrFwo83_KQtK5DELIELM5C5XKoBTMKr2skTRb3RGdRrFfHzj8uuy_an5SCUv0lv2o_VQ9xkj6bjjTWRiU6eDW4XC-NEThPswveFiSeugahg1SUiomM3orxCCck_1u5SVxDvfEFoPOYSr208wsGUTc" alt="Joyful Chaos" class="h-16 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform"/>
+        </a>
+        <!-- Links -->
+        <ul class="flex flex-wrap justify-center items-center gap-6 font-label-md text-label-md mb-6 md:mb-0">
+            <li><a href="#" class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300">Instagram</a></li>
+            <li><a href="#" class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300">Pinterest</a></li>
+            <li><a href="#" class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300">Ocean Policy</a></li>
+            <li><a href="#" class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300">Contact Us</a></li>
+        </ul>
+        <!-- Copyright Text -->
+        <div class="font-body-md text-body-md text-tertiary-fixed dark:text-tertiary text-center md:text-right">
+            © 2024 Joyful Chaos. Created with love by the shore.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

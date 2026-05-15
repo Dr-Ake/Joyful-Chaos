@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Start Designing - Joyful Chaos</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#eeecf9",
+                    "surface-variant": "#e3e1ee",
+                    "inverse-on-surface": "#f1effc",
+                    "tertiary-fixed": "#cde5ff",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#b6beff",
+                    "on-tertiary-fixed": "#001d32",
+                    "on-secondary-fixed": "#1e1c00",
+                    "background": "#fbf8ff",
+                    "secondary-fixed": "#f0e82b",
+                    "inverse-primary": "#bcc2ff",
+                    "on-secondary-container": "#696500",
+                    "on-primary-fixed-variant": "#0d2acf",
+                    "surface-container-low": "#f4f2ff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#ede527",
+                    "inverse-surface": "#2f3039",
+                    "tertiary-fixed-dim": "#95ccff",
+                    "on-tertiary-container": "#8bc8ff",
+                    "tertiary": "#003c5f",
+                    "secondary": "#646100",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#dfe0ff",
+                    "primary": "#001db1",
+                    "surface-container-highest": "#e3e1ee",
+                    "outline": "#757687",
+                    "surface-dim": "#dad9e5",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#4c4900",
+                    "tertiary-container": "#005483",
+                    "surface": "#fbf8ff",
+                    "outline-variant": "#c5c5d8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fbf8ff",
+                    "on-surface-variant": "#444655",
+                    "surface-container-high": "#e8e7f4",
+                    "on-surface": "#1a1b24",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#344ae6",
+                    "secondary-fixed-dim": "#d3cb00",
+                    "primary-fixed-dim": "#bcc2ff",
+                    "error": "#ba1a1a",
+                    "primary-container": "#1f37d7",
+                    "on-tertiary-fixed-variant": "#004a75",
+                    "on-primary-fixed": "#000b62",
+                    "on-background": "#1a1b24"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Delius"],
+                    "headline-md": ["Delius"],
+                    "headline-xl": ["Delius"],
+                    "headline-lg": ["Delius"],
+                    "label-md": ["Delius"],
+                    "headline-xl-mobile": ["Delius"],
+                    "body-lg": ["Delius"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="w-full relative z-50">
+    <nav class="bg-surface-container dark:bg-surface-dim border-b-2 border-tertiary-fixed shadow-[0_4px_20px_-4px_rgba(0,60,95,0.1)] docked full-width top rounded-b-xl">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+            <!-- Brand Logo -->
+            <a class="block" href="index.html">
+                <img alt="Joyful Chaos" class="h-12 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxgTzqlZJ3vkEajj0njO5CkoM28HBlPVfey9V5XGA0uIKUadfBecQMsKo9qEkkpvyZzOAzRHn5AnHJTweah_xoE25oIY1qbnLzMHK3keD5nNm5eY2-WtNTofbrFwo83_KQtK5DELIELM5C5XKoBTMKr2skTRb3RGdRrFfHzj8uuy_an5SCUv0lv2o_VQ9xkj6bjjTWRiU6eDW4XC-NEThPswveFiSeugahg1SUiomM3orxCCck_1u5SVxDvfEFoPOYSr208wsGUTc"/>
+            </a>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center gap-8 font-headline-md text-headline-md">
+                <li>
+                    <a class="text-on-surface-variant dark:text-outline font-medium hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300" href="index.html">About</a>
+                </li>
+                <!-- Active State for customization page -->
+                <li>
+                    <a class="text-primary dark:text-primary-fixed-dim border-b-2 border-secondary-container pb-1 hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300" href="design.html">Shop Customs</a>
+                </li>
+                <li>
+                    <a class="text-on-surface-variant dark:text-outline font-medium hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300" href="#">Vinyl</a>
+                </li>
+                <li>
+                    <a class="text-on-surface-variant dark:text-outline font-medium hover:text-primary hover:scale-105 hover:rotate-1 transition-all duration-300" href="#">Freedom for Fighters</a>
+                </li>
+            </ul>
+            <!-- Trailing Primary Action -->
+            <button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-xl hover:scale-105 hover:rotate-1 transition-all duration-300 active:scale-95 shadow-sm shadow-tertiary/10">
+                Start Designing
+            </button>
+        </div>
+    </nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col">
+    <!-- Header -->
+    <div class="mb-12">
+        <h1 class="font-headline-xl text-headline-xl text-tertiary mb-4 relative inline-block">
+            Design Your Masterpiece
+            <svg class="absolute -bottom-2 -right-6 w-12 h-12 text-secondary-container animate-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Hang it on the line and let your imagination dry in the coastal breeze. Mix colors, add whimsical patches, and create something uniquely yours.
+        </p>
+    </div>
+    <!-- Bento Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+        <!-- Left Canvas: The Clothesline Preview (Col Span 7) -->
+        <div class="lg:col-span-7 relative w-full rounded-[2rem] bg-surface-container border-2 border-tertiary-fixed ambient-shadow paper-texture overflow-hidden flex flex-col items-center justify-center min-h-[600px] p-8">
+            <!-- Integrated Canvas Picker Floating Palette -->
+            <div class="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 bg-surface-container-lowest/80 backdrop-blur-md p-3 rounded-2xl border-2 border-tertiary-fixed shadow-lg z-20">
+                <p class="font-label-md text-label-md text-tertiary text-center mb-1 border-b border-surface-variant pb-2">Item</p>
+                <button class="w-12 h-12 rounded-xl bg-surface-container-low border-2 border-primary flex items-center justify-center text-primary shadow-sm hover:bg-primary-fixed transition-colors" title="T-Shirt">
+                    <span class="material-symbols-outlined text-2xl">apparel</span>
+                </button>
+                <button class="w-12 h-12 rounded-xl bg-transparent border-2 border-transparent hover:border-tertiary-fixed flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Hoodie">
+                    <span class="material-symbols-outlined text-2xl">dry_cleaning</span>
+                </button>
+                <button class="w-12 h-12 rounded-xl bg-transparent border-2 border-transparent hover:border-tertiary-fixed flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Tote Bag">
+                    <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+                </button>
+                <button class="w-12 h-12 rounded-xl bg-transparent border-2 border-transparent hover:border-tertiary-fixed flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Beanie">
+                    <span class="material-symbols-outlined text-2xl">sports_baseball</span>
+                </button>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+                <!-- The "Clothesline" -->
+                <svg class="absolute top-16 left-0 w-full h-8" preserveAspectRatio="none" viewBox="0 0 100 10">
+                    <path d="M0,5 Q50,15 100,5" fill="none" opacity="0.5" stroke="#757687" stroke-dasharray="2 1" stroke-width="0.5"></path>
+                </svg>
+                <!-- Pegs -->
+                <div class="absolute top-14 left-[30%] w-3 h-8 bg-secondary rounded-sm rotate-6 shadow-sm"></div>
+                <div class="absolute top-14 right-[30%] w-3 h-8 bg-secondary rounded-sm -rotate-6 shadow-sm"></div>
+            </div>
+            <!-- 3D T-Shirt Preview Container -->
+            <div class="relative z-10 w-full max-w-md mx-auto aspect-[3/4] flex items-center justify-center transform hover:-translate-y-2 transition-transform duration-500 ease-out">
+                <img alt="Blank t-shirt hanging on a line" class="w-full h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb9t9av0NqA5pIH0G-fCtRGJpIRwyRBHAvWYi2avtheDZqfmcFQ_UrVjxyfKLjPyyTch0f54rFhMQzY4e3vH4YcOS7m_mBFw5eWCu_6KYaxDdUhkkWyyHzoS-J0_jHQ_WrGzHAJ7HgpO3woBpJ6kKao6mz2UulL7iMEgKmWg8eHa9-vjJOgQ5ckLoKMsQhOuqQ9lephTP1VbhnHNQ0MTFNuRhkz4RRYUW5c4NxlvVtK5hSc6mu5T5cR9KUIkcqEI9ErlPlqXIVF3c7"/>
+                <!-- Overlay Patch Placeholder (Active state simulation) -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 border-2 border-dashed border-secondary-container rounded-full flex items-center justify-center bg-surface/50 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+                    <span class="material-symbols-outlined text-tertiary" style='font-variation-settings: "FILL" 1;'>add</span>
+                </div>
+            </div>
+            <!-- View Controls -->
+            <div class="absolute bottom-6 flex gap-4 bg-surface-container-lowest px-6 py-3 rounded-full border-2 border-tertiary-fixed shadow-sm">
+                <button class="text-outline hover:text-primary transition-colors flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">rotate_left</span>
+                </button>
+                <div class="w-px h-6 bg-surface-container-highest"></div>
+                <button class="text-outline hover:text-primary transition-colors flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">rotate_right</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Right Panel: Controls (Col Span 5) -->
+        <div class="lg:col-span-5 flex flex-col gap-10">
+            <!-- Color Picker Section -->
+            <div class="flex flex-col gap-4">
+                <h2 class="font-headline-md text-headline-md text-tertiary flex items-center gap-2">
+                    <span class="material-symbols-outlined text-error" style='font-variation-settings: "FILL" 1;'>palette</span>
+                    Pick Your Wave
+                </h2>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-col gap-6 w-full">
+                        <!-- Custom Rainbow Canvas Picker -->
+                        <div class="relative w-full aspect-video rounded-2xl border-4 border-surface-container-highest shadow-inner overflow-hidden bg-white flex items-center justify-center cursor-pointer">
+                            <canvas id="rainbow-canvas" class="w-full h-full block touch-none"></canvas>
+                            <!-- The draggable ring -->
+                            <div id="color-picker-ring" class="absolute w-6 h-6 border-4 border-white rounded-full shadow-lg -translate-x-1/2 -translate-y-1/2 pointer-events-none bg-primary transition-colors duration-100 ease-out z-10" style="top: 50%; left: 50%;"></div>
+                            
+                            <!-- Happy Cloud Left -->
+                            <div id="cloud-left" class="absolute pointer-events-none drop-shadow-md transition-opacity duration-300 z-20">
+                                <svg viewBox="0 0 100 60" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                    <path d="M 25,50 C 10,50 10,30 25,30 C 25,15 50,10 60,25 C 70,15 90,20 85,35 C 100,35 95,50 80,50 Z" stroke="#95ccff" stroke-width="2" stroke-linejoin="round" fill="white"/>
+                                    <circle cx="42" cy="38" r="2.5" fill="#444655"/>
+                                    <circle cx="58" cy="38" r="2.5" fill="#444655"/>
+                                    <path d="M 47 41 Q 50 45 53 41" stroke="#444655" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                                    <ellipse cx="35" cy="41" rx="3.5" ry="2" fill="#ffdad6"/>
+                                    <ellipse cx="65" cy="41" rx="3.5" ry="2" fill="#ffdad6"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Happy Cloud Right -->
+                            <div id="cloud-right" class="absolute pointer-events-none drop-shadow-md transition-opacity duration-300 z-20">
+                                <svg viewBox="0 0 100 60" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                    <path d="M 25,50 C 10,50 10,30 25,30 C 25,15 50,10 60,25 C 70,15 90,20 85,35 C 100,35 95,50 80,50 Z" stroke="#95ccff" stroke-width="2" stroke-linejoin="round" fill="white"/>
+                                    <circle cx="42" cy="38" r="2.5" fill="#444655"/>
+                                    <circle cx="58" cy="38" r="2.5" fill="#444655"/>
+                                    <path d="M 47 41 Q 50 45 53 41" stroke="#444655" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                                    <ellipse cx="35" cy="41" rx="3.5" ry="2" fill="#ffdad6"/>
+                                    <ellipse cx="65" cy="41" rx="3.5" ry="2" fill="#ffdad6"/>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Lightness Slider -->
+                        <div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-tertiary-fixed shadow-sm">
+                            <span class="material-symbols-outlined text-outline">dark_mode</span>
+                            <input type="range" id="lightness-slider" min="0" max="100" value="50" class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer" style="accent-color: #001db1;">
+                            <span class="material-symbols-outlined text-primary" style='font-variation-settings: "FILL" 1;'>light_mode</span>
+                        </div>
+                        <p class="font-label-md text-label-md text-on-surface-variant text-center">Select your signature shade from the full spectrum</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-t-2 border-tertiary-fixed"/>
+            
+            <!-- Drag & Drop Design Area with Tabs -->
+            <div class="flex flex-col gap-4">
+                <h2 class="font-headline-md text-headline-md text-tertiary flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary-container" style='font-variation-settings: "FILL" 1;'>interests</span>
+                    Add Your Design
+                </h2>
+                <!-- Tabs -->
+                <div class="flex gap-2 p-1 bg-surface-container rounded-xl border border-outline-variant/30">
+                    <button class="py-2 px-4 bg-surface-container-lowest text-primary rounded-lg font-label-md text-label-md shadow-sm border border-tertiary-fixed flex items-center justify-center gap-2 w-full">
+                        <span class="material-symbols-outlined text-[18px]">texture</span>
+                        Custom Patches
+                    </button>
+                </div>
+                <!-- Drop Zone -->
+                <div id="patch-drop-zone" class="w-full border-2 border-dashed border-outline-variant rounded-[1.5rem] bg-surface-container-lowest hover:bg-tertiary-fixed/30 transition-colors p-8 flex flex-col items-center justify-center text-center cursor-pointer min-h-[200px] relative overflow-hidden group mt-2 hover-lift">
+                    <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-[32px]">add_photo_alternate</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant font-medium max-w-[80%]">
+                        Drag &amp; drop your whimsical designs here, or <span class="text-primary underline decoration-2 underline-offset-4">browse collection</span>
+                    </p>
+                    <!-- Decorative background shapes in D&D area -->
+                    <div class="absolute -bottom-4 -right-4 text-tertiary-fixed opacity-50 group-hover:opacity-100 transition-opacity">
+                        <svg fill="currentColor" height="60" viewBox="0 0 24 24" width="60"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h4v2h-4v4h-2v-4H7V9h4z"></path></svg>
+                    </div>
+                </div>
+            </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col gap-4 mt-auto pt-8">
+                <button class="w-full bg-primary text-on-primary font-headline-md text-headline-md py-4 rounded-xl shadow-md shadow-primary/20 hover:bg-surface-tint hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+                    <span class="">Sew It Up</span>
+                    <span class="material-symbols-outlined text-[24px]">check_circle</span>
+                </button>
+                <button class="w-full bg-transparent text-tertiary font-label-md text-label-md py-4 rounded-xl border-2 border-tertiary-fixed hover:bg-surface-container-low hover:border-primary transition-all duration-300">
+                    Save as Draft for Later
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary dark:bg-surface-container-lowest full-width rounded-t-[3rem] mt-section-gap border-t-4 border-secondary-container/20 relative z-10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-base w-full px-margin-mobile md:px-margin-desktop py-12 max-w-7xl mx-auto">
+        <!-- Brand Logo -->
+        <a class="block mb-4 md:mb-0" href="index.html">
+            <img alt="Joyful Chaos" class="h-16 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxgTzqlZJ3vkEajj0njO5CkoM28HBlPVfey9V5XGA0uIKUadfBecQMsKo9qEkkpvyZzOAzRHn5AnHJTweah_xoE25oIY1qbnLzMHK3keD5nNm5eY2-WtNTofbrFwo83_KQtK5DELIELM5C5XKoBTMKr2skTRb3RGdRrFfHzj8uuy_an5SCUv0lv2o_VQ9xkj6bjjTWRiU6eDW4XC-NEThPswveFiSeugahg1SUiomM3orxCCck_1u5SVxDvfEFoPOYSr208wsGUTc"/>
+        </a>
+        <!-- Links -->
+        <ul class="flex flex-wrap justify-center items-center gap-6 font-label-md text-label-md mb-6 md:mb-0">
+            <li class="">
+                <a class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300" href="#">Instagram</a>
+            </li>
+            <li class="">
+                <a class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300" href="#">Pinterest</a>
+            </li>
+            <li class="">
+                <a class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300" href="#">Ocean Policy</a>
+            </li>
+            <li class="">
+                <a class="text-tertiary-fixed/80 dark:text-tertiary/70 hover:text-secondary-container hover:-translate-y-1 transition-all duration-300" href="#">Contact Us</a>
+            </li>
+        </ul>
+        <!-- Copyright Text -->
+        <div class="font-body-md text-body-md text-tertiary-fixed dark:text-tertiary text-center md:text-right">
+            © 2024 Joyful Chaos. Created with love by the shore.
+        </div>
+    </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
